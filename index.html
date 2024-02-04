@@ -95,8 +95,6 @@
     </body>
 </html> -->
 
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -125,20 +123,72 @@
                 background-color: green;
                 padding: 5px;
             }
+            #pervoe {
+                width: 200px;
+                background-color: rgb(233, 183, 168);
+                padding: 5px;
+            }
+            #garnir {
+                width: 200px;
+                background-color: rgb(233, 223, 168);
+                padding: 5px;
+            }
         </style>
     </head>
     <body id="parent">
         <h2>Итого:</h2>
         <p id="itogo"></p>
-<div id="salads">
+        <div id="salads">
             <button onclick="add(300)">Болгарский с говядиной</button>
             <button onclick="add(280)">Болгарский с курицей</button>
             <button onclick="add(200)">Брынза</button>
             <button onclick="add(220)">Зимний</button>
             <button onclick="add(350)">Кальмарчик</button>
             <button onclick="add(220)">Коктейль</button>
-            <button onclick="del5()">del 500 Salad</button>
-</div>
+            <button onclick="add(160)">Летний</button>
+            <button onclick="add(450)">Морской</button>
+            <button onclick="add(240)">Теплый</button>
+        </div>
+        <div id="pervoe">
+            <button onclick="add(170)">Борщ</button>
+            <button onclick="add(150)">Бульон с мясом</button>
+            <button onclick="add(120)">Бульон с яйцом</button>
+            <button onclick="add(150)">Лапша куриная</button>
+            <button onclick="add(300)">Солянка</button>
+        </div>
+        <div id="garnir">
+            <button onclick="add(100)">Гречка с грибами</button>
+            <button onclick="add(80)">Картофель отварной</button>
+            <button onclick="add(180)">Картофель по-деревенски</button>
+            <button onclick="add(150)">Картофель фри</button>
+            <button onclick="add(200)">Овощное ассорти горячее</button>
+            <button onclick="add(90)">Рис</button>
+            <button onclick="add(100)">Спагетти с сыром</button>
+        </div>
+        <div id="0">
+            <button onclick="add(0)"></button>
+            <button onclick="add(0)"></button>
+        </div>
+        <div id="0">
+            <button onclick="add(0)"></button>
+            <button onclick="add(0)"></button>
+        </div>
+        <div id="0">
+            <button onclick="add(0)"></button>
+            <button onclick="add(0)"></button>
+        </div>
+        <div id="0">
+            <button onclick="add(0)"></button>
+            <button onclick="add(0)"></button>
+        </div>
+        <div id="0">
+            <button onclick="add(0)"></button>
+            <button onclick="add(0)"></button>
+        </div>
+        <div id="0">
+            <button onclick="add(0)"></button>
+            <button onclick="add(0)"></button>
+        </div>
 
         <h2>Mimo</h2>
         <button onclick="showMessages()">Добавить летний салат</button>
@@ -150,14 +200,7 @@
                 myVar += num;
                 itogo.textContent = myVar;
             }
-            function add5() {
-                myVar += 5;
-                itogo.textContent = myVar;
-            }
-            function del5() {
-                myVar -= 500;
-                itogo.textContent = myVar;
-            }
+
 
             // mimo
             // https://mimo.org/web/track/197/tutorial/1023/chapter/7866/learn?lesson=7
