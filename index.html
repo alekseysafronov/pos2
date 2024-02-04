@@ -133,9 +133,61 @@
                 background-color: rgb(233, 223, 168);
                 padding: 5px;
             }
+            #svinina {
+                width: 200px;
+                background-color: rgb(255, 61, 119);
+                padding: 5px;
+            }
+            #kurica {
+                width: 200px;
+                background-color: rgb(253, 218, 19);
+                padding: 5px;
+            }
+            #govadina {
+                width: 200px;
+                background-color: rgb(251, 60, 8);
+                padding: 5px;
+            }
+            #ryba {
+                width: 200px;
+                background-color: rgb(96, 176, 246);
+                padding: 5px;
+            }
+            #pasta {
+                width: 200px;
+                background-color: rgb(255, 231, 96);
+                padding: 5px;
+            }
+            #hz {
+                width: 200px;
+                background-color: rgb(146, 183, 251);
+                padding: 5px;
+            }
+            #gz {
+                width: 200px;
+                background-color: rgb(90, 155, 253);
+                padding: 5px;
+            }
+            #sous {
+                width: 200px;
+                background-color: rgb(233, 223, 168);
+                padding: 5px;
+            }
+            #hleb {
+                width: 200px;
+                background-color: rgb(233, 223, 168);
+                padding: 5px;
+            }
+            #desert {
+                width: 200px;
+                background-color: rgb(228, 135, 81);
+                padding: 5px;
+            }
         </style>
     </head>
     <body id="parent">
+        <ul id="list"></ul>
+
         <h2>Итого:</h2>
         <p id="itogo"></p>
         <div id="salads">
@@ -165,33 +217,73 @@
             <button onclick="add(90)">Рис</button>
             <button onclick="add(100)">Спагетти с сыром</button>
         </div>
-        <div id="0">
-            <button onclick="add(0)"></button>
-            <button onclick="add(0)"></button>
+        <div id="svinina">
+            <button onclick="add(350)">Котлетки домашние</button>
+            <button onclick="add(355)">Мясо в горшочке</button>
+            <button onclick="add(220)">Мясо по-французски</button>
+            <button onclick="add(200)">Свинина отбивная</button>
+            <button onclick="add(230)">Свинина по-домашнему</button>
+            <button onclick="add(320)">Свинина с кальмарами</button>
+            <button onclick="add(280)">Свинина с овощами</button>
+            <button onclick="add(220)">Фунтик</button>
         </div>
-        <div id="0">
-            <button onclick="add(0)"></button>
-            <button onclick="add(0)"></button>
+        <div id="kurica">
+            <button onclick="add(280)">Грудка с грибами</button>
+            <button onclick="add(330)">Грудка стейк</button>
+            <button onclick="add(350)">Курица по-египетски</button>
         </div>
-        <div id="0">
-            <button onclick="add(0)"></button>
-            <button onclick="add(0)"></button>
+        <div id="govadina">
+            <button onclick="add(300)">Говядина по-татарски</button>
+            <button onclick="add(400)">Телятина по-пекински</button>
         </div>
-        <div id="0">
-            <button onclick="add(0)"></button>
-            <button onclick="add(0)"></button>
+        <div id="ryba">
+            <button onclick="add(670)">Семга-гриль</button>
         </div>
-        <div id="0">
-            <button onclick="add(0)"></button>
-            <button onclick="add(0)"></button>
+        <div id="pasta">
+            <button onclick="add(350)">Паста карбонара</button>
         </div>
-        <div id="0">
-            <button onclick="add(0)"></button>
-            <button onclick="add(0)"></button>
+        <div id="hz">
+            <button onclick="add(50)">Бутер с грудинкой</button>
+            <button onclick="add(50)">Бутер с колбасой</button>
+            <button onclick="add(150)">Бутер с семгой</button>
+            <button onclick="add(50)">Бутер сыром и маслом</button>
+            <button onclick="add(50)">Лимон</button>
+            <button onclick="add(150)">Маслины</button>
+            <button onclick="add(180)">Сало</button>
+            <button onclick="add(200)">Сельдь</button>
+            <button onclick="add(370)">Семга с/с</button>
+            <button onclick="add(180)">Соленья домашние</button>
+            <button onclick="add(300)">Язык</button>
+        </div>
+        <div id="gz">
+            <button onclick="add(200)">Гренки</button>
+            <button onclick="add(250)">Жульен грибной</button>
+            <button onclick="add(250)">Жульен куриный</button>
+            <button onclick="add(900)">Креветки-гриль</button>
+            <button onclick="add(300)">Крылышки куриные</button>
+            <button onclick="add(320)">Пельмени</button>
+            <button onclick="add(550)">Ребрышки с фри</button>
+            <button onclick="add(200)">Яичница</button>
+        </div>
+        <div id="sous">
+            <button onclick="add(30)">Кетчуп</button>
+            <button onclick="add(30)">Майонез</button>
+            <button onclick="add(50)">Соус чесночный</button>
+        </div>
+        <div id="hleb">
+            <button onclick="add(5)">Хлеб</button>
+        </div>
+        <div id="desert">
+            <button onclick="add(200)">Блин с мясом</button>
+            <button onclick="add(250)">Блин с семгой</button>
+            <button onclick="add(180)">Блин с творогом</button>
+            <button onclick="add(180)">Блин с яблоками</button>
+            <button onclick="add(180)">Блин со сгущенкой</button>
+            <button onclick="add(150)">Мороженное с допингом</button>
+            <button onclick="add(150)">Мороженное с фруктами</button>
         </div>
 
-        <h2>Mimo</h2>
-        <button onclick="showMessages()">Добавить летний салат</button>
+
         <script>
             const itogo = document.querySelector('#itogo');
             let myVar = 0;
@@ -199,18 +291,14 @@
             function add(num) {
                 myVar += num;
                 itogo.textContent = myVar;
+                const btnText = event.target.innerHTML;
+                const listItem = document.createElement('li');
+                listItem.textContent = btnText;
+                const list = document.querySelector('#list');
+                list.appendChild(listItem);
             }
 
 
-            // mimo
-            // https://mimo.org/web/track/197/tutorial/1023/chapter/7866/learn?lesson=7
-            function showMessages() {
-                let bodyElement = document.getElementById('parent');
-                const paragraph = document.createElement('p');
-                paragraph.innerHTML = 'Салат летний 1шт';
-                bodyElement.appendChild(paragraph);
-            }
-            // mimo end
         </script>
     </body>
 </html>
