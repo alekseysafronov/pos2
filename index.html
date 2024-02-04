@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        #terminal {
+            width: 300px;
+            margin: 0 auto;
+        }
+        #bluda {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        #display {
+            height: 50px;
+            background-color: #ccc;
+            text-align: right;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        #keyboard {
+            margin-top: 20px;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .key {
+            width: 80px;
+            height: 40px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .key2 {
+            width: 270px;
+            height: 40px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        body {
+            background-color: darkgrey;
+        }
+    </style>
+    <body>
+        <div id="terminal">
+            <div id="display"></div>
+            <div id="dis2"></div>
+            <div id="keyboard">
+                <div class="row">
+                    <button class="key" onclick="appendNumber('+')">+</button>
+
+                    <button class="key" onclick="clearDisplay()">C</button>
+                    <button class="key" onclick="processPayment()">Pay</button>
+                </div>
+            </div>
+        </div>
+        <div id="bluda">
+            <button class="key2" onclick="opa(300)">Болгарский с говядиной</button>
+            <button class="key2" onclick="appendNumber(280)">Болгарский с курицей</button>
+            <button class="key2" onclick="appendNumber(200)">Брынза</button>
+            <button class="key2" onclick="appendNumber(220)">Зимний</button>
+            <button class="key2" onclick="appendNumber(350)">Кальмарчик</button>
+            <button class="key2" onclick="appendNumber(220)">Коктейль</button>
+
+        </div>
+        <script>
+            let display = document.getElementById('display');
+
+            function appendNumber(number) {
+                display.innerText += number;
+            }
+            function opa(number) {
+                display.innerText += number;
+                dis2.innerText += number;
+            }
+
+            function clearDisplay() {
+                display.innerText = '';
+            }
+
+            function processPayment() {
+                let amount = parseFloat(display.innerText);
+                // Здесь можно добавить логику для обработки платежа
+                clearDisplay();
+            }
+
+
+        </script>
+    </body>
+</html>
