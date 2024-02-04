@@ -1,0 +1,51 @@
+{
+    "name": "Официант!",
+    "short_name": "Мой",
+    "start_url": "/",
+    "scope": "/",
+    "id": "/",
+    "display": "standalone",
+    "display_override": [
+        "window-controls-overlay"
+      ],
+    "background_color": "#181c25",
+    "description": "ОФИК",
+    "icons": [
+      {
+        "src": "homescreen48.png",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+      {
+        "src": "homescreen144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "homescreen192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "homescreen192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "homescreen192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "form-factor": "wide"
+      }
+    ],
+    "screenshots": [
+        {
+          "src": "./screenshot-playlist.png",
+          "sizes": "1280x720",
+          "platform": "wide",          
+          "label": "Суперприложуха для офиков a list of songs, and playback buttons."
+        }
+    ]
+  }
+  
