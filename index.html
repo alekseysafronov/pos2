@@ -111,20 +111,34 @@
                 display: block;
                 margin-top: 1px;
                 padding: 5px;
+                width: 200px;
+            }
+            #itogo {
+                background-color: lightgray;
+                padding: 5px;
+                width: 200px;
+            }
+            #salads {
+                /* display: flex;
+                flex-direction: column; */
+                width: 200px;
+                background-color: green;
+                padding: 5px;
             }
         </style>
     </head>
     <body id="parent">
-        <h1>Итого счетчик</h1>
-        <p>Итого:</p>
+        <h2>Итого:</h2>
         <p id="itogo"></p>
-        <button onclick="add(300)">Болгарский с говядиной</button>
-        <button onclick="add(280)">Болгарский с курицей</button>
-        <button onclick="add(200)">Брынза</button>
-        <button onclick="add(220)">Зимний</button>
-        <button onclick="add(350)">Кальмарчик</button>
-        <button onclick="add(220)">Коктейль</button>
-        <button onclick="del5()">del 500 Salad</button>
+<div id="salads">
+            <button onclick="add(300)">Болгарский с говядиной</button>
+            <button onclick="add(280)">Болгарский с курицей</button>
+            <button onclick="add(200)">Брынза</button>
+            <button onclick="add(220)">Зимний</button>
+            <button onclick="add(350)">Кальмарчик</button>
+            <button onclick="add(220)">Коктейль</button>
+            <button onclick="del5()">del 500 Salad</button>
+</div>
 
         <h2>Mimo</h2>
         <button onclick="showMessages()">Добавить летний салат</button>
@@ -132,7 +146,6 @@
             const itogo = document.querySelector('#itogo');
             let myVar = 0;
             itogo.textContent = myVar;
-            itogo.onclick = add5;
             function add(num) {
                 myVar += num;
                 itogo.textContent = myVar;
