@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -91,6 +91,70 @@
             }
 
 
+        </script>
+    </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: gray;
+            }
+            button {
+                display: block;
+                margin-top: 1px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body id="parent">
+        <h1>Итого счетчик</h1>
+        <p>Итого:</p>
+        <p id="itogo"></p>
+        <button onclick="add(300)">Болгарский с говядиной</button>
+        <button onclick="add(280)">Болгарский с курицей</button>
+        <button onclick="add(200)">Брынза</button>
+        <button onclick="add(220)">Зимний</button>
+        <button onclick="add(350)">Кальмарчик</button>
+        <button onclick="add(220)">Коктейль</button>
+        <button onclick="del5()">del 500 Salad</button>
+
+        <h2>Mimo</h2>
+        <button onclick="showMessages()">Добавить летний салат</button>
+        <script>
+            const itogo = document.querySelector('#itogo');
+            let myVar = 0;
+            itogo.textContent = myVar;
+            itogo.onclick = add5;
+            function add(num) {
+                myVar += num;
+                itogo.textContent = myVar;
+            }
+            function add5() {
+                myVar += 5;
+                itogo.textContent = myVar;
+            }
+            function del5() {
+                myVar -= 500;
+                itogo.textContent = myVar;
+            }
+
+            // mimo
+            // https://mimo.org/web/track/197/tutorial/1023/chapter/7866/learn?lesson=7
+            function showMessages() {
+                let bodyElement = document.getElementById('parent');
+                const paragraph = document.createElement('p');
+                paragraph.innerHTML = 'Салат летний 1шт';
+                bodyElement.appendChild(paragraph);
+            }
+            // mimo end
         </script>
     </body>
 </html>
